@@ -7,7 +7,7 @@ package Sorts;
  * 4.不断重复上述过程，随着序列减少最后变为一个，最终完成排序
  * */
 public class Shell {
-	static final int SIZE=10;
+	static final int SIZE=16;
 	static void shellSort(int[] a) {
 		int i,j,h;
 		int r,temp;
@@ -36,7 +36,12 @@ public class Shell {
 		int[] shuzu=new int[SIZE];
 		int i;
 		for(i=0;i<SIZE;i++) {
-			shuzu[i]=(int)(100+Math.random()*(100+1));
+			shuzu[i]=(int)(Math.random()*(30+1));
+		}
+		System.out.print("第0步排序结果");
+		for(i=0;i<SIZE;i++) {
+			System.out.print(shuzu[i]+" ");
+			
 		}
 		System.out.print("\n");
 		shellSort(shuzu);
